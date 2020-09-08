@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>매장 고객 (예약하기)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Jquery Modal CSS -->
+  <link href="../../vendor/jquery/jquery.modal.css" rel="stylesheet">
+
+  <!-- Jquery UI CSS -->
+  <link href="../../vendor/jquery/jquery-ui.min.css" rel="stylesheet">
+
+  <!-- Custom Common CSS -->
+  <link href="../../css/common.css" rel="stylesheet">
+
+</head> 
+
+<body class="bg-light">
+
+  <!-- 헤더 네비 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- 로고 -->
+      <a class="navbar-brand" href="#"><img src="../../image/logo/lettering-bright.png"></a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!-- 메인 네비 -->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">가격표</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">사진첩</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">애견용품</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">찾아오시는 길</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">예약하기</a></li>
+        </ul>
+
+        <!-- 회원 네비 -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">홍길동님</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">매장관리</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">펫 관리</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">회원정보</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">로그아웃</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- 헤더 네비 -->
+
+
+  <!-- main -->
+  <main role="main">
+
+    <!-- 타이틀 -->
+    <div class="jumbotron title_bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="../../image/example/shop-title/title_img.png" class="rounded-circle btn-block mt-4 title_img">
+          </div>
+          <div class="col-md-10 title_fnt">
+            <h1 class="display-3 mt-4"><b>매장 이름</b></h1>
+            <div class="mt-2">
+              <b>(매장 간략 소개글)</b> 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치 아무말 대잔치...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /. 타이틀 -->
+  
+    <!-- 컨텐츠 -->
+    <div class="container">
+      
+      <!-- 컨텐츠 제목 -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <h2>예약 하기</h2><hr>
+        </div>
+      </div>
+      <!-- /. 컨텐츠 제목 -->
+
+      <!-- 컨텐츠 내용 -->
+      <div class="row">
+        <div class="col-md-1"></div>
+        <!-- 캘린더, 시간 선택영역 -->
+        <div class="col-md-3">
+          <!-- 달력 -->
+          <div class="row mb-5">
+            <div class="col-md-12">
+              <h5 class="mb-2"><b>날짜 선택</b></h5>
+              <!-- 달럭 라이브러리 들어간 부분 -->
+              <div id="date1"></div>
+              <!-- /. 달럭 라이브러리 들어간 부분 -->
+            </div>
+          </div>
+          <!-- 시간표 -->
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <h5 class="mb-2"><b>시간 선택</b></h5>
+              <table class="table table-sm text-center mb-3 tbl_client_reservation">
+                <thead>
+                  <tr><th scope="col">시 간</th><th scope="col">현 황</th><th scope="col">선 택</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">08:00</th><td>불가능</td><td><input type="radio" name="timeRadio" value="08:00"></td></tr>
+                  <tr><th scope="row">09:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="09:00"></td></tr>
+                  <tr><th scope="row">10:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="10:00"></td></tr>
+                  <tr><th scope="row">11:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="11:00"></td></tr>
+                  <tr><th scope="row">12:00</th><td>불가능</td><td><input type="radio" name="timeRadio" value="12:00"></td></tr>
+                  <tr><th scope="row">13:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="13:00"></td></tr>
+                  <tr><th scope="row">14:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="14:00"></td></tr>
+                  <tr><th scope="row">15:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="15:00"></td></tr>
+                  <tr><th scope="row">16:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="16:00"></td></tr>
+                  <tr><th scope="row">17:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="17:00"></td></tr>
+                  <tr><th scope="row">18:00</th><td>가능</td><td><input type="radio" name="timeRadio" value="18:00"></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 예약정보 입력영역 -->
+        <div class="col-md-7">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="row mb-2">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-11">
+                    <h5 class="mb-2"><b>상세 내용</b></h5>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-2"><h6><b>날&nbsp;&nbsp;&nbsp;&nbsp;짜</b></h6></div>
+                  <div class="col-md-9"><input type="text" id="dateResult" class="form-control" required readonly></div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-2"><h6><b>시&nbsp;&nbsp;&nbsp;&nbsp;간</b></h6></div>
+                  <div class="col-md-9"><input type="text" id="timeResult" class="form-control" required readonly></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-2"><h6><b>고객명</b></h6></div>
+                  <div class="col-md-9"><input type="text" id="" class="form-control" required></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-1"><h6><b>연락처</b></h6></div>
+                  <div class="col-md-9"><input type="text" id="" class="form-control" required></div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-1"><h6><b>펫선택</b></h6></div>
+                  <div class="col-md-9 btn-group">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">예약하실 펫을 선택하세요.</button>
+                    <div class="dropdown-menu dropdown-menu-left">
+                      <!-- 아이템추가: .dropdown-mypet-item.html() 변경 -->
+                      <button class="dropdown-item dropdown-mypet-item" type="button">럭키 (Lucky)</button>
+                      <button class="dropdown-item dropdown-mypet-item" type="button">슈슈 (Shu-shu)</button>
+                      <button class="dropdown-item dropdown-mypet-item" type="button">제이 (Jay)</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2 mt-1"><h6><b>등록증</b></h6></div>
+                  <div class="col-md-9 petLicenseWrap">
+                    <div class="petLicense rounded-lg">
+                      <div class="petLicensePicture"></div>
+                      <div class="petLicenseTitle text-center">반려동물 등록증</div>
+                      <!-- 이름변경: .petLicenseTitle.html() 변경 -->
+                      <div class="petLicenseName text-center"><label class="lblName">펫 이름</label></div>
+                      <div class="petLicenseSubTitle">종&nbsp;&nbsp;&nbsp;&nbsp;류 :<br>나&nbsp;&nbsp;&nbsp;&nbsp;이 :<br>몸무게 :</div>
+                      <!-- 종류변경: .lblKind.val() 변경 / 나이변경: .lblAge.val() 변경 / 몸무게변경: .lblWeight.val()변경 -->
+                      <div class="petLicenseContents"><label class="lblKind">종류</label><br><label class="lblAge">0</label> 세<br><label class="lblWeight">0.0</label> kg</div>
+                      <div class="petLicenseStamp text-center">페타그램</div>
+                      <div class="petLicenseFooter text-center">페 타 그 램</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="row mb-3">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-9 mt-5 text-center text-primary"><h6><b>예약이 완료되었습니다.</b></h6></div>
+                </div> -->
+              </div>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- /. 컨텐츠 내용 -->
+
+      <!-- 컨텐츠 마무리 -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-8"></div>
+        <div class="col-md-2"><a class="btn btn-primary btn-sm btn-block btn-example" href="#layer2" role="button">예 약</a></div>
+        <div class="col-md-2"><a class="btn btn-secondary btn-sm btn-block" href="#" role="button">취 소</a></div>
+      </div>
+      <!-- /. 컨텐츠 마무리 -->
+
+      <!-- 예약확인 팝업 -->
+      <div class="dim-layer">
+        <div class="dimBg"></div>
+        <div id="layer2" class="pop-layer">
+          <div class="pop-container">
+            <div class="pop-conts">
+                <!-- 예약확인 팝업 : 내용 -->
+                <div class="btn-l">
+                  <h4>예약확인</h4>
+                </div>
+                <!-- -- -->
+                <div class="pop-close-x">
+                  <a type="button" class="close btn-layerClose" aria-label="Close" href="#"><span aria-hidden="true">&times;</span></a>
+                </div>
+                <!-- -- -->
+                <table class="table table-sm">
+                  <colgroup>
+                    <col width="27%">
+                    <col width="73%">
+                  </colgroup>
+                  <thead>
+                    <tr class="table-primary"><th scope="col" colspan="3">매장 정보</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td scope="row" class="text-center">매장이름 :</td><td colspan="2">모모샵</td></tr>
+                    <tr><td scope="row" class="text-center">매장번호 :</td><td colspan="2">02 - 312 - 3333</td></tr>
+                    <tr><td scope="row" class="text-center">매장주소 :</td><td colspan="2">서울특별시 서초구 모모동</td></tr>
+                  </tbody>
+                </table>
+                <!-- -- -->
+                <table class="table table-sm">
+                  <colgroup>
+                    <col width="27%">
+                    <col width="73%">
+                  </colgroup>
+                  <thead>
+                    <tr class="table-primary"><th scope="col" colspan="3">예약 정보</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td scope="row" class="text-center">예약날짜 :</td><td colspan="2">2020 / 08 / 29</td></tr>
+                    <tr><td scope="row" class="text-center">예약시간 :</td><td colspan="2">11:00</td></tr>
+                  </tbody>
+                </table>
+                <!-- -- -->
+                <table class="table table-sm">
+                  <colgroup>
+                    <col width="27%">
+                    <col width="73%">
+                  </colgroup>
+                  <thead>
+                    <tr class="table-primary"><th scope="col" colspan="3">고객 정보</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td scope="row" class="text-center">고객성명 :</td><td colspan="2">홍길동</td></tr>
+                    <tr><td scope="row" class="text-center">연 락 처 :</td><td colspan="2">010 - 1111 - 1111</td></tr>
+                  </tbody>
+                </table>
+                <!-- -- -->
+                <table class="table table-sm">
+                  <colgroup>
+                    <col width="27%">
+                    <col width="73%">
+                  </colgroup>
+                  <thead>
+                    <tr class="table-primary"><th scope="col" colspan="3">반려동물 정보</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td scope="row" class="text-center">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름 :</td><td colspan="2">호두</td></tr>
+                    <tr><td scope="row" class="text-center">종&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;류 :</td><td colspan="2">푸들</td></tr>
+                    <tr><td scope="row" class="text-center">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이 :</td><td colspan="2">2 세</td></tr>
+                    <tr><td scope="row" class="text-center">몸 무 게 :</td><td colspan="2">8.2 kg</td></tr>
+                  </tbody>
+                </table>
+                <!-- -- -->
+                <div class="btn-r">
+                  <a class="btn btn-primary btn-sm btn-layerClose" href="#" role="button">예약 확정</a>
+                  <a class="btn btn-secondary btn-sm btn-layerClose" href="#" role="button">다시 작성</a>
+                </div>
+              <!-- /. 예약확인 팝업 : 내용 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /. 예약확인 팝업 -->
+
+    <!-- /. 컨텐츠 -->
+  </main>
+
+
+
+  <!-- 풋터 -->
+  <footer class="bg-dark">
+    <div class="container">
+      <p class="m-0 py-4 text-left text-white">
+        <a class="navbar-brand" href="#"><img src="../../image/logo/lettering-bright.png"></a><br><br>
+        <b>페타그램</b>&nbsp;&nbsp;&nbsp;서울특별시 서초구 서초대로 77길 13 401호<br>
+        <b>대표이사</b> : 풀스택A팀&nbsp;&nbsp;&nbsp;<b>사업자등록번호</b> : 000-00-00000&nbsp;&nbsp;&nbsp;<b>고객센터</b> : 02-000-0000&nbsp;&nbsp;&nbsp;<b>이메일</b> : help@petagram.com
+      </p>
+    </div>
+  </footer>
+  <!-- /. 풋터 -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Jquery UI javaScript -->
+  <script src="../../vendor/jquery/jquery-ui.min.js"></script>
+  <script src="../../vendor/jquery/datepicker-ko.js"></script>
+
+  <!-- custom javascript -->
+  <script src="../../js/common.js"></script>
+
+</body>
+
+</html>

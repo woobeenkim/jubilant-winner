@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="storeres">
+	<insert id="adminreser" parameterType="com.javaex.vo.StorereservationVo">
+	<![CDATA[
+		insert into store_reservation values(
+							#{regdate},
+							#{shopno},
+							1)
+	]]>
+	
+	
+	</insert>
+	
+		<select id="restime" parameterType="com.javaex.vo.StorereservationVo" 
+		resultType="com.javaex.vo.StorereservationVo">
+		<![CDATA[
+			SELECT		substr(regdate,12,17) as regdate, shopno, display
+			FROM		store_reservation
+			where		shopno = #{shopno}
+			and			substr(regdate,1,10) = #{regdate}
+		]]>
+	</select>
+	
+	<delete id="taken" parameterType="com.javaex.vo.ReservationVo">
+		<![CDATA[
+			delete	from store_reservation
+			where	regdate = #{regdate}	
+		]]>
+	
+	</delete>
+	
+</mapper>

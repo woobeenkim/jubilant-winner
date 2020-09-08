@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+	<!-- 회원가입하기. -->
+	<insert id="insert" parameterType="com.javaex.vo.UserVo" >
+		<![CDATA[
+			INSERT INTO users VALUES (
+			seq_users_no.NEXTVAL,
+			#{id},
+			#{userName},
+			#{password},
+			#{phoneNo},
+			sysdate
+			)
+		]]>
+	</insert>
+	
+	<!-- 로그인하기. -->
+	<select id="selectOne" parameterType="com.javaex.vo.UserVo" 
+		resultType="com.javaex.vo.SessionVo">
+		<![CDATA[
+			SELECT		userNo,userName
+			FROM		users
+			where		id=#{id}
+			and  		password= #{password}
+		]]>
+	</select>
+	
+	<!-- 매장등록하기. -->
+	<insert id="storeInsert" parameterType="com.javaex.vo.ShopVo">
+		<![CDATA[
+			INSERT INTO shop VALUES (
+			seq_shop_no.NEXTVAL,
+			#{userNo},
+			#{shopDomain},
+			#{shopNumber},
+			#{shopAddress},
+			#{shopTitle},
+			#{shopAuth},
+			'default',
+			#{shopEmail},
+			#{shopLogo},
+			0,
+			#{shopDesc},
+			sysdate
+			)
+		]]>
+	</insert>
+	
+	<!-- 매장 조회하기. -->
+	<select id="storeSelect" parameterType="int" 
+		resultType="com.javaex.vo.SessionVo">
+		<![CDATA[
+			SELECT		shopNo,shopDomain
+			FROM		shop
+			where		userNo=#{userNo}
+		]]>
+	</select>
+	<!-- 예약시 유저정보 가져오기 -->
+	<select id="getuser" parameterType="int" 
+		resultType="com.javaex.vo.UserVo">
+		<![CDATA[
+			SELECT		userno,username,phoneno
+			FROM		users
+			where		userno=#{userNo}
+		]]>
+	</select>
+</mapper>

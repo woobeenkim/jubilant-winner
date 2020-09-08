@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dog">
+
+
+	<select id="getdog" parameterType="int" 
+		resultType="com.javaex.vo.DogVo">
+		<![CDATA[			
+			select  dogno, dogname, dogage, dogweight, dogtype, userno, dogimg
+			from 	dog
+			where	dogname = #{dogName}
+			and		userno= #{userNo}
+		]]>
+	</select>
+
+	<!-- 펫 리스트 -->
+	<select id="getList" parameterType="integer" resultType="com.javaex.vo.DogVo" >
+		<![CDATA[
+			select		dogno,
+						userno,
+						dogtype,
+						dogname,
+						dogage,
+						dogetc,
+						dogimg,
+						dogweight
+			from		dog
+			where		userno = #{userno}
+			order by	dogno asc
+		]]>
+	</select>
+
+
+	<select id="getdList" parameterType="int" 
+		resultType="com.javaex.vo.DogVo">
+		<![CDATA[			
+			select  dogno, dogname, userno
+			from 	dog
+			where	userno = #{userNo}
+		]]>
+	</select>
+
+
+	<!-- 펫 추가 -->
+	<insert id="insert" parameterType="com.javaex.vo.DogVo" >
+		<![CDATA[
+			INSERT INTO dog VALUES (
+				seq_dog_no.NEXTVAL,
+				#{userNo},
+				#{dogType},
+				#{dogName},
+				#{dogAge},
+				#{dogEtc},
+				#{dogImg},
+				#{dogWeight}
+			)
+		]]>
+	</insert>
+	
+	<!-- 선택된 펫 정보 가져오기 -->
+	<select id="SelectOne" parameterType="com.javaex.vo.DogVo">
+		<![CDATA[
+			select      dogNo,
+			            dogType,
+			            dogName,
+			            dogAge,
+			            dogEtc,
+			            dogImg,
+			            dogWeight
+			from		dog
+			where		dogno = #{dogno}
+		]]>
+	</select>
+
+</mapper>

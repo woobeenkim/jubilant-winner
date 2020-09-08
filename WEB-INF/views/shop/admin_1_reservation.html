@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>매장 관리자 (예약관리)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Jquery Modal CSS -->
+  <link href="../../vendor/jquery/jquery.modal.css" rel="stylesheet">
+
+  <!-- Jquery UI CSS -->
+  <link href="../../vendor/jquery/jquery-ui.min.css" rel="stylesheet">
+
+  <!-- Custom Common CSS -->
+  <link href="../../css/common.css" rel="stylesheet">
+
+</head> 
+
+<body class="bg-light">
+
+  <!-- 헤더 네비 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- 로고 -->
+      <a class="navbar-brand" href="#"><img src="../../image/logo/lettering-bright.png"></a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!-- 메인 네비 -->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">가격표</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">사진첩</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">애견용품</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">찾아오시는 길</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">예약하기</a></li>
+        </ul>
+
+        <!-- 회원 네비 -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">홍길동님</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">매장관리</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">펫 관리</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">회원정보</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">로그아웃</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- 헤더 네비 -->
+
+
+  <!-- main -->
+  <main role="main">
+
+    <!-- 타이틀 -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="../../image/example/shop-title/title_img.png" class="rounded-circle btn-block mt-4">
+          </div>
+          <div class="col-md-10">
+            <h1 class="display-3 mt-4"><b>매장 이름</b></h1>
+            <!-- 타이틀 메뉴 -->
+            <div class="mt-4">
+              <a class="btn btn-primary btn-lg" href="#" role="button">예약관리 &raquo;</a>
+              <a class="btn btn-secondary btn-lg" href="#" role="button">정보수정 &raquo;</a>
+              <a class="btn btn-secondary btn-lg" href="#" role="button">페이지 관리 &raquo;</a>
+              <!-- 토글 스위치 -->
+              <div class="toggleWrap">
+                <label class="switchTitle">검색 노출</label>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <!-- /. 토글 스위치 -->
+            </div>
+            <!-- /. 타이틀 메뉴 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /. 타이틀 -->
+  
+    <!-- 컨텐츠 -->
+    <div class="container">
+
+      <!-- 컨텐츠 묶음 : 캘린더, 매장정보 -->
+      <div class="row mb-3">
+
+        <!-- 컨텐츠 내용 : 캘린더 -->
+        <div class="col-md-4">
+          <h2>캘린더</h2>
+          <p>Calander API</p>
+        </div>
+        <!-- /. 컨텐츠 내용 : 캘린더 -->
+
+        <!-- 컨텐츠 내용 : 매장 정보 -->
+        <div class="col-md-8">
+          
+          <h2>샵 이름</h2>
+          
+          <p class="mt-1">(매장 소개 간략) 저희 매장은 블라블라 쏼라쏼라 아싸라비아 킹왕짱...</p>
+          
+          <!-- 별표 점수매기기 -->
+          <span class="star-input">
+            <span class="input">
+              <input type="radio" name="star-input" id="p1" value="0.5"><label for="p1">0.5</label>
+              <input type="radio" name="star-input" id="p2" value="1.0"><label for="p2">1.0</label>
+              <input type="radio" name="star-input" id="p3" value="1.5"><label for="p3">1.5</label>
+              <input type="radio" name="star-input" id="p4" value="2.0"><label for="p4">2.0</label>
+              <input type="radio" name="star-input" id="p5" value="2.5"><label for="p5">2.5</label>
+              <input type="radio" name="star-input" id="p6" value="3.0"><label for="p6">3.0</label>
+              <input type="radio" name="star-input" id="p7" value="3.5"><label for="p7">3.5</label>
+              <input type="radio" name="star-input" id="p8" value="4.0"><label for="p8">4.0</label>
+              <input type="radio" name="star-input" id="p9" value="4.5"><label for="p9">4.5</label>
+              <input type="radio" name="star-input" id="p10" value="5.0"><label for="p10">5.0</label>
+            </span>
+            <output for="star-input"><b>0</b>점</output>
+          </span>
+          <!-- /. 별표 점수매기기 -->
+          
+          <h6 class="reviewTitle">리뷰 51개 | 1개월 | 3개월 | 6개월</h6>
+          
+          <!-- 예약설정 버튼 -->
+          <p><a class="btn btn-secondary btn-example" href="#layer2" role="button">예약설정 &raquo;</a></p>
+          <!-- /. 예약설정 버튼 -->
+
+          <!-- 예약설정 -->
+          <div class="dim-layer">
+            <div class="dimBg"></div>
+            <div id="layer2" class="pop-layer">
+              <div class="pop-container">
+                <div class="pop-conts">
+                  <!-- 예약팝업 -->
+                  <div class="btn-l">
+                    <h4>예약설정</h4>
+                  </div>
+                  <div class="pop-close-x">
+                    <a type="button" class="close btn-layerClose" aria-label="Close" href="#"><span aria-hidden="true">&times;</span></a>
+                  </div>
+                  <div class="px-5 mb-3">
+                    <input type="text" class="form-control mb-3" id="adminDateResult" placeholder="날짜를 선택하세요.">
+                  </div>
+                  <div id="adminCalendar" class="px-5 mb-3"></div>
+                  <div class="px-5 mb-3">
+                    <table class="table table-sm text-center">
+                      <thead>
+                        <tr><th scope="col" colspan="2">예약가능시간</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="08:00">08:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="14:00">14:00</label></td></tr>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="09:00">09:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="15:00">15:00</label></td></tr>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="10:00">10:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="16:00">16:00</label></td></tr>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="11:00">11:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="17:00">17:00</label></td></tr>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="12:00">12:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="18:00">18:00</label></td></tr>
+                        <tr><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="13:00">13:00</label></td><td><label class="m-0"><input type="checkbox" class="mr-2" name="adminTimeSetting" value="19:00">19:00</label></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="btn-r px-5 text-center">
+                    <a class="btn btn-primary btn-sm btn-layerClose mr-2 px-3" href="#" role="button">확인</a>
+                    <a class="btn btn-secondary btn-sm btn-layerClose ml-2 px-3" href="#" role="button">닫기</a>
+                  </div>
+                  <!-- /. 예약팝업 -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /. 예약설정 -->
+
+        </div>
+        <!-- /. 컨텐츠 내용 : 매장 정보 -->
+
+      </div>
+      <!-- /. 컨텐츠 묶음 : 캘린더, 매장정보 -->
+
+      <!-- 컨텐츠 묶음 : 예약 내역 -->
+      <div class="row mb-5">
+
+        <!-- 컨텐츠 내용 : 예약 내역 -->
+        <div class="col-md-12">
+          <h2 class="mb-3">예약 내역</h2>
+          
+          <table class="table table-hover text-center">
+            <thead>
+              <tr><th scope="col">No</th><th scope="col">고 객 명</th><th scope="col">날 짜</th><th scope="col">시간대</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>홍길동</td><td>2020년 08월 12일</td><td>09:00 ~ 11:00</td></tr>
+              <tr><th scope="row">2</th><td>이순신</td><td>2020년 08월 12일</td><td>11:00 ~ 12:00</td></tr>
+              <tr><th scope="row">3</th><td>유관순</td><td>2020년 08월 12일</td><td>13:00 ~ 15:00</td></tr>
+              <tr><th scope="row">4</th><td>유재석</td><td>2020년 08월 12일</td><td>15:00 ~ 17:00</td></tr>
+              <tr><th scope="row">5</th><td>박명수</td><td>2020년 08월 12일</td><td>17:00 ~ 18:00</td></tr>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- /. 컨텐츠 내용 : 예약 내역 -->
+
+      </div>
+      <!-- /. 컨텐츠 묶음 : 예약 내역 -->
+
+    </div>
+    <!-- /. 컨텐츠 -->
+
+  </main>
+  <!-- /. main -->
+
+
+
+  <!-- 풋터 -->
+  <footer class="bg-dark">
+    <div class="container">
+      <p class="m-0 py-4 text-left text-white">
+        <a class="navbar-brand" href="#"><img src="../../image/logo/lettering-bright.png"></a><br><br>
+        <b>페타그램</b>&nbsp;&nbsp;&nbsp;서울특별시 서초구 서초대로 77길 13 401호<br>
+        <b>대표이사</b> : 풀스택A팀&nbsp;&nbsp;&nbsp;<b>사업자등록번호</b> : 000-00-00000&nbsp;&nbsp;&nbsp;<b>고객센터</b> : 02-000-0000&nbsp;&nbsp;&nbsp;<b>이메일</b> : help@petagram.com
+      </p>
+    </div>
+  </footer>
+  <!-- /. 풋터 -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Jquery UI javaScript -->
+  <script src="../../vendor/jquery/jquery-ui.min.js"></script>
+  <script src="../../vendor/jquery/datepicker-ko.js"></script>
+
+  <!-- custom javascript -->
+  <script src="../../js/common.js"></script>
+
+</body>
+
+</html>
